@@ -21,8 +21,6 @@ public class BankAppTest {
         bankAccountService.addBankAccount(new BankAccount(4, "Bob", 2060.5));
         bankAccountService.addBankAccount(new BankAccount(5, "Tim", 2780.8));
         bankAccountService.addBankAccount(new BankAccount(6, "Sarah", 6750.5));
-
-        ArrayList<BankAccount> accountlist = bankAccountService.getBankAccountList();
     }
 
     @Test
@@ -51,6 +49,24 @@ public class BankAppTest {
         double actualResult = bankAccountService.findBalanceByBankAccount(3);
         Assert.assertEquals(expectedResult, actualResult, 0.1);
     }
+
+
+//    @Test
+//    public void updateBankAccountTest()
+//    {
+//        String expectedResult = "BankAccount{accountNumber=2, customerName='Joe', balance=5200.9}";
+//        bankAccountService.updateBankAccount(new BankAccount(2, "Joe", 5200.9));
+//        ArrayList<BankAccount> accountList = bankAccountService.getBankAccountList();
+//        String actual = "";
+//        for (BankAccount x: accountList){
+//            if(x.getAccountNumber() == 2)
+//                actual = x.toString();
+//        }
+//        Assert.assertEquals
+//    }
+
+    // git commit test
+
 
 
 
