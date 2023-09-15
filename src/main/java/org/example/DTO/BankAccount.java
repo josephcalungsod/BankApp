@@ -37,6 +37,10 @@ public class BankAccount {
         this.balance = balance;
     }
 
+    /**
+     * Converts the BankAccount object to a String object for readability.
+     * @return String
+     */
     @Override
     public String toString() {
         return "BankAccount{" +
@@ -46,16 +50,4 @@ public class BankAccount {
                 '}';
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        BankAccount that = (BankAccount) o;
-        return accountNumber == that.accountNumber && Double.compare(balance, that.balance) == 0 && Objects.equals(customerName, that.customerName);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(accountNumber, customerName, balance);
-    }
 }

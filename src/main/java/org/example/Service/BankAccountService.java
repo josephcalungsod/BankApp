@@ -67,9 +67,9 @@ public class BankAccountService {
     }
 
     /**
-     * this method finds the BankAccount object in the ARr
+     * This method finds the BankAccount object in the ArrayList corresponding to the accountNumber provided and if it exists, it gets returned.
      * @param accountNumber
-     * @return
+     * @return BankAccount
      */
 
     public BankAccount findBankAccount(int accountNumber)
@@ -82,6 +82,13 @@ public class BankAccountService {
         return null;
     }
 
+    /**
+     * This method finds the BankAccount object in the ArrayList corresponding to the accountNumber provided and if it
+     * exists, it returns the "balance" field of the object.
+     * @param accountNumber
+     * @return Double
+     */
+
     public double findBalanceByBankAccount(int accountNumber)
     {
         for(BankAccount x: bankAccountList){
@@ -92,6 +99,13 @@ public class BankAccountService {
         return -1;
     }
 
+    /**
+     * This method finds the BankAccount object in the ArrayList corresponding to the accountNumber provided and if it
+     * exists, it subtracts the amount provided from the "balance" field of the object.
+     * @param accountNumber
+     * @param amount
+     */
+
     public void withdraw(int accountNumber, double amount){
         for(BankAccount x: bankAccountList) {
             if (x.getAccountNumber() == accountNumber) {
@@ -101,6 +115,12 @@ public class BankAccountService {
         }
     }
 
+    /**
+     * This method finds the BankAccount object in the ArrayList corresponding to the accountNumber provided and if it
+     * exists, it adds the amount provided from the "balance" field of the object.
+     * @param accountNumber
+     * @param amount
+     */
     public void deposit(int accountNumber, double amount){
         for(BankAccount x: bankAccountList) {
             if (x.getAccountNumber() == accountNumber) {
